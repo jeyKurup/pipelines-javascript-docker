@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jeykuruppipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jeykuruppipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jeykuruppipelinesjavascriptdocker 
+          image: jeycontainerregistry.azurecr.io/jeykuruppipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
